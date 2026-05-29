@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calforge — make an "Add to Calendar" link & .ics file, locally</title>
+    <meta
+      name="description"
+      content="Fill in an event and get a downloadable .ics file plus Add to Calendar links for Google, Outlook, Apple and Yahoo — generated entirely in your browser. No third-party service, no tracking, no sign-up."
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>📅 calforge</h1>
+      <p class="tagline">
+        Make a real <strong>"Add to Calendar"</strong> link &amp; <strong>.ics</strong> file —
+        Google, Outlook, Apple, Yahoo.
+      </p>
+      <p class="privacy">🔒 100% local — no third-party service, no tracking, no sign-up.</p>
+    </header>
+
+    <main>
+      <form id="form" class="form" autocomplete="off">
+        <label>Event title <input id="title" type="text" value="Product launch 🚀" required /></label>
+
+        <label class="check"><input id="allday" type="checkbox" /> All-day event</label>
+
+        <div class="times" id="times">
+          <label>Starts <input id="start" type="datetime-local" /></label>
+          <label>Ends <input id="end" type="datetime-local" /></label>
+        </div>
+        <div class="dates" id="dates" hidden>
+          <label>Start date <input id="startDate" type="date" /></label>
+          <label>End date <input id="endDate" type="date" /></label>
+        </div>
+
+        <label>Location <input id="location" type="text" placeholder="Zoom, Seoul, …" /></label>
+        <label>Description <textarea id="description" rows="2" placeholder="Details, agenda, link…"></textarea></label>
+        <label>URL <input id="url" type="url" placeholder="https://…" /></label>
+        <label>Reminder
+          <select id="alarm">
+            <option value="">None</option>
+            <option value="10">10 minutes before</option>
+            <option value="30">30 minutes before</option>
+            <option value="60">1 hour before</option>
+            <option value="1440">1 day before</option>
+          </select>
+        </label>
+      </form>
+
+      <section class="actions">
+        <a id="dl" class="btn" download="event.ics">⬇️ Download .ics (Apple / Outlook)</a>
+        <a id="google" class="btn alt" target="_blank" rel="noopener">Google Calendar</a>
+        <a id="outlook" class="btn alt" target="_blank" rel="noopener">Outlook</a>
+        <a id="yahoo" class="btn alt" target="_blank" rel="noopener">Yahoo</a>
+      </section>
+
+      <section class="preview">
+        <div class="preview-head"><span>.ics preview</span><button id="copy" type="button">Copy</button></div>
+        <pre id="out"></pre>
+      </section>
+    </main>
+
+    <footer>
+      <a href="https://github.com/didrod205/calforge">GitHub</a> ·
+      <a href="https://www.npmjs.com/package/calforge">npm</a> ·
+      <span>MIT</span> · <span>Zero dependencies</span>
+    </footer>
+
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
