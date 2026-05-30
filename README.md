@@ -4,11 +4,11 @@
 
 ### Make a real "Add to Calendar" link & `.ics` file — locally, in milliseconds.
 
-[![npm version](https://img.shields.io/npm/v/calforge.svg?color=success)](https://www.npmjs.com/package/calforge)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/calforge?label=gzip)](https://bundlephobia.com/package/calforge)
+[![npm version](https://img.shields.io/npm/v/@didrod2539/calforge.svg?color=success)](https://www.npmjs.com/package/@didrod2539/calforge)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/@didrod2539/calforge?label=gzip)](https://bundlephobia.com/package/@didrod2539/calforge)
 [![CI](https://github.com/didrod205/calforge/actions/workflows/ci.yml/badge.svg)](https://github.com/didrod205/calforge/actions/workflows/ci.yml)
-[![types](https://img.shields.io/npm/types/calforge.svg)](https://www.npmjs.com/package/calforge)
-[![license](https://img.shields.io/npm/l/calforge.svg)](./LICENSE)
+[![types](https://img.shields.io/npm/types/@didrod2539/calforge.svg)](https://www.npmjs.com/package/@didrod2539/calforge)
+[![license](https://img.shields.io/npm/l/@didrod2539/calforge.svg)](./LICENSE)
 
 **[🌐 Try the free web app →](https://didrod205.github.io/calforge/)** &nbsp;·&nbsp; fill in an event, get an `.ics` + provider links. No sign-up, nothing tracked.
 
@@ -55,8 +55,11 @@ without a SaaS.
 For the library:
 
 ```bash
-npm install calforge
+npm install @didrod2539/calforge
 ```
+
+> Published on npm under the `@didrod2539` scope (`@didrod2539/calforge`). The
+> import name matches the package name; everything else is identical.
 
 Zero dependencies. ESM + CJS + TypeScript types. Runs in the browser, Node, Deno and Bun.
 
@@ -65,7 +68,7 @@ Zero dependencies. ESM + CJS + TypeScript types. Runs in the browser, Node, Deno
 ### Generate an `.ics`
 
 ```ts
-import { toICS } from "calforge";
+import { toICS } from "@didrod2539/calforge";
 
 const ics = toICS({
   title: "Product launch 🚀",
@@ -81,7 +84,7 @@ const ics = toICS({
 ### Get "Add to Calendar" links
 
 ```ts
-import { links } from "calforge";
+import { links } from "@didrod2539/calforge";
 
 const l = links({
   title: "Team offsite",

@@ -1,6 +1,9 @@
 {
-  "name": "calforge",
+  "name": "@didrod2539/calforge",
   "version": "0.1.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Generate valid .ics calendar files and 'Add to Calendar' links (Google, Outlook, Yahoo, Apple) entirely locally — no third-party service, no tracking, no API key. RFC 5545 correct, zero dependencies.",
   "type": "module",
   "main": "./dist/index.js",
